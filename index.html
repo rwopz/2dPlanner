@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Units</title>
+  <link rel="stylesheet" type="text/css" href="src/style.css" />
+  <style>
+    /* Add any additional styles for the units */
+    .unit {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li id="toggleBaseUnits" class="has-submenu">
+          <a href="#">Base Units</a>
+          <!-- Submenu for Base Units -->
+          <ul class="submenu">
+            <li>
+              <!-- Sub-submenu for Base Unit 1 -->
+              <ul class="sub-submenu">
+                <li><a href="#" id="spawnBaseUnit1Btn">Spawn Unit 1 Test</a></li>
+              </ul>
+            </li>
+            <li>
+              <!-- Sub-submenu for Base Unit 2 -->
+              <ul class="sub-submenu">
+                <li><a href="#" id="spawnBaseUnit2Btn">Spawn Unit 2 Test</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li id="toggleWallUnits" class="has-submenu">
+          <a href="#">Wall Units</a>
+          <!-- Submenu for Wall Units -->
+          <ul class="submenu">
+            <li>
+              <!-- Sub-submenu for Wall Unit 1 -->
+              <ul class="sub-submenu">
+                <li><a href="#" id="spawnWallUnit1Btn">Spawn Unit 1 Test</a></li>
+              </ul>
+            </li>
+            <li>
+              <!-- Sub-submenu for Wall Unit 2 -->
+              <ul class="sub-submenu">
+                <li><a href="#" id="spawnWallUnit2Btn">Spawn Unit 2 Test</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li id="toggleTowerUnits" class="has-submenu">
+          <a href="#">Tower Units</a>
+          <!-- Submenu for Tower Units -->
+          <ul class="submenu">
+            <li>
+              <!-- Sub-submenu for Tower Unit 1 -->
+              <ul class="sub-submenu">
+                <li><a href="#" id="spawnTowerUnit1Btn">Spawn Unit 1 Test</a></li>
+              </ul>
+            </li>
+            <li>
+              <!-- Sub-submenu for Tower Unit 2 -->
+              <ul class="sub-submenu">
+                <li><a href="#" id="spawnTowerUnit2Btn">Spawn Unit 2 Test</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- <li><a href="#">Toggle Grid</a></li> -->
+        <li><a href="#" id="copyButton">Copy</a></li>
+        <li><a href="#" id="pasteButton">Paste</a></li>
+        <li><a href="#" id="clearButton">Clear</a></li>
+        <li><a href="#" id="deleteButton">Delete</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="canvas-container">
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </div>
+  <script src="src/dragging.ts"></script>
+  <script src="src/debug.ts"></script>
+  <script src="src/delete.ts"></script>
+  <script src="src/copy+paste.ts"></script>
+  <script src="src/selection.ts"></script>
+  <script src="src/hamburger.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #26a85d; /* Wren Kitchens primary color */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+}
+
+/* Hamburger menu styles */
+#menuToggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #e6fadf;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+/* Hamburger icon styles */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+
+/* Hide the middle slice */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Rotate the last slice */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  left: 0;
+  background: #26a85d;
+  color: #fff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translateY(-100%); /* Move off-screen initially */
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  overflow: hidden; 
+}
+
+#menu li {
+  padding: 10px 20px;
+  font-size: 18px; 
+  display: none;
+}
+
+.submenu {
+  display: none;
+}
+.submenu.show {
+  display: block;
+  max-height; 200px;
+}
+
+.submenu-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #26a85d;
+  color: #fff;
+  list-style-type: none;
+  display: none;
+}
+
+.submenu-content li {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Show menu items when the menu is opened */
+#menuToggle input:checked ~ #menu li,
+#submenu-toggle:checked ~ .submenu-content {
+  display: block;
+}
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Canvas container styles */
+.canvas-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60%; 
+}
+
+/* Canvas styles */
+#canvas {
+  position: absolute;
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  border: 3px solid #000;
+}
